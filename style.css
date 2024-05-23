@@ -43,6 +43,9 @@ nav h3{
 
   
 }
+nav h4{
+    display:none;
+}
 
 nav h3:nth-child(4){
    width: fit-content;
@@ -279,7 +282,7 @@ nav h1{
 #page2{
     width: 100%;
     height: 100vh;
-    padding: 5vh 7vw;
+    padding: 2vh 7vw;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -289,17 +292,18 @@ nav h1{
 
 
 #top-left{
-    width: 55%;
-    height: 90%;
+    width: 50%;
+    height: 100%;
     /* background-color: antiquewhite; */
 
 }
 
 #top-left img{
-    height: 100%;
+    height: 80%;
     width: 100%;
     object-fit: cover;
     object-position: top;
+    margin-bottom: 5px;
     /* transition: all ease-in-out 1s; */
 
 }
@@ -309,15 +313,17 @@ nav h1{
 
 
 #top-left h1{
-    font-size: 32px;
+    font-size: 22px;
     font-weight: bolder;
     letter-spacing: 3px;
     text-transform: uppercase;
+    text-align: center;
+    /* margin-bottom: 50px; */
 }
 
 #top-right{
-    width:35%;
-    height: 90%;
+    width:30%;
+    height: 100%;
 }
 
 #top-right img{
@@ -334,7 +340,7 @@ nav h1{
 }
 
 #top-right-text h3{
-    font-size: 20px;
+    font-size: 16px;
     font-weight: 800;
     text-align: left;
     /* width: 50%; */
@@ -361,11 +367,11 @@ nav h1{
     font-weight: 600;
     margin-top: 5%;
     letter-spacing: 1px;
-    margin-bottom: 40px;
+    margin-bottom: 20px;
 }
 
 .elemm{
-    width: 100%;
+    width: 100%;                                        
     height: 120px;
     /* background-color: aliceblue; */
     border-bottom: 2px solid black;
@@ -383,7 +389,7 @@ nav h1{
 .elemm>h1{
     margin-top: 10px;
     margin-left: 20px;
-    font-size: 20px;
+    font-size: 30px;
     text-transform: uppercase;
     
 
@@ -399,7 +405,7 @@ nav h1{
 }
 
 .elem-right h2{
-    font-size: 30px;
+    font-size: 20px;
     text-transform: capitalize;
     letter-spacing: 1px;
 
@@ -465,4 +471,353 @@ nav h1{
     to{
         transform: translateX(calc(-100% - 24px));
     }
+}
+
+
+
+/* media query */
+@media (max-width:600px){
+    nav{
+       
+        /* background-color: bisque; */
+        margin-top: 10px;
+        justify-content: space-between;
+        padding: 0 25px;
+        /* background-color: aqua; */
+    
+    }
+
+    nav h4{
+        display: initial;
+    }
+
+    nav h3{
+    
+        display: none;
+    
+      
+    }
+    
+
+    
+    nav h1{
+        font-size: 30px;
+        height: 100%;
+        width: 30%;
+        /* background-color: aliceblue; */
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+     
+    }
+
+    .hero{
+    
+        margin: 10px 10px;
+       
+    }
+    
+    .hero img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+        /* padding: 40px 80px; */
+        
+    
+    }
+    
+    .hero-content{
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        height: 60%;
+        padding: 10px 10px;
+        /* background-color: rgb(26, 139, 239); */
+    }
+    
+    .content-top{
+        width: 100%;
+        height: 70%;
+        /* background-color: transparent; */
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+       
+        color: white;
+    
+    }
+    
+    .content-top h1{
+        font-size: 40px;
+        /* width: 450px; */
+    }
+    #num{
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        border: 1px solid rgb(237, 231, 231);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 16px;
+        /* transition: all linear .2s; */
+        overflow: hidden;
+        position: relative;
+    
+    }
+    #num h1{
+        z-index: 1;
+        font-size: 18px;
+        color: rgb(255, 255, 255);
+    }
+    #scroll{
+        width: 100%;
+        height: 10vh;
+       white-space: nowrap;
+       overflow-x: hidden;
+       overflow-y: hidden;
+    
+    }
+    
+    
+    .container{
+        width: 100%;
+        height: 100%;
+       display: inline-block;
+       animation-name: moveimg;
+       animation-duration: 5s;
+       animation-timing-function: linear;
+       animation-iteration-count: infinite;
+    
+    }
+    
+    #scroll::-webkit-scrollbar{
+        /* display: none; */
+    }
+    
+    #scroll img{
+        /* display: none; */
+        width: 65px;
+        height: 65px;
+        border-radius: 50%;
+        margin: 0px 5px;
+        object-fit: cover;
+        object-position: top;
+        border: 1px solid tomato;
+    
+    }
+    
+    @keyframes moveimg {
+        from{
+            transform: translateX(0);
+        }
+        to{
+            transform: translateX(calc(-100% - 4px));
+        }
+    }
+
+
+    #alpha{
+        width: 100%;
+        padding: 5px 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 4px;
+        border-top: 1px solid #000;
+        border-bottom: 1px solid #000;
+    
+    }
+    
+    #alpha h4{
+        font-size: 14px;
+        text-transform: uppercase;
+        font-style: italic;
+        letter-spacing: 0px;
+        text-decoration: overline;
+        border: 1px solid #00000000;
+    
+    }
+    
+    
+    #alpha h4:hover{
+        border: 1px solid #000;
+        cursor: pointer;
+    
+    }
+    
+    #alpha h6{
+        font-size: 8px;
+        padding: 0px;
+        font-weight: 100;
+        /* border-radius: 50%; */
+        border: 1px solid #00000000;
+    
+    }
+    
+    #alpha h6:hover{
+        border: 1px solid #000;
+        cursor: pointer;
+    
+    }
+
+
+    #page2{
+        width: 100%;
+        height: 100vh;
+        padding: 2vh 1vw;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-direction: column;
+        /* gap: 10px; */
+    }
+
+
+    .elemm{
+        width: 100%;
+        height: 120px;
+        /* background-color: aliceblue; */
+        border-bottom: 2px solid black;
+        display: flex;
+        justify-content: space-between;
+        position: relative;
+    }
+
+
+    .elemm:nth-child(2){
+        border-top: 2px solid rgb(0, 0, 0);
+    
+     
+    }
+    
+    .elemm>h1{
+        margin-top: 10px;
+        margin-left: 10px;
+        font-size: 16px;
+        text-transform: uppercase;
+        
+    
+    }
+    
+    .elem-right{
+        width: 50%;
+        height: 100%;
+        /* background-color: aqua; */
+        display: flex;   
+        justify-content: center;
+        flex-direction: column;
+    }
+    
+    .elem-right h2{
+        font-size: 16px;
+        text-transform: capitalize;
+        letter-spacing: 1px;
+    
+    }
+    
+    .elem-right h6{
+        font-size: 14px;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+    }
+    
+    .elemm img{
+        width: 120px;
+        height: 120px;
+        border-radius: 50%;
+        object-fit: cover;
+        object-position: top;
+        position: absolute;
+        left: 20%;
+        top: 0;
+        opacity: 0;
+        transition: all ease-in-out .5s;
+    }
+    
+    .elemm:hover img{
+       opacity: 1;
+        left: 25%;
+    }
+
+
+
+    
+#page2{
+    width: 100%;
+    height: 100vh;
+    padding: 2vh 1vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* gap: 10px; */
+}
+
+
+
+#top-left{
+    width: 100%;
+    height: 45%;
+    /* background-color: antiquewhite; */
+
+}
+
+#top-left img{
+    height: 80%;
+    width: 100%;
+    object-fit: cover;
+    object-position: top;
+    margin-bottom: 5px;
+    /* transition: all ease-in-out 1s; */
+
+}
+
+
+
+
+
+#top-left h1{
+    font-size: 22px;
+    font-weight: bolder;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    text-align: center;
+    /* margin-bottom: 50px; */
+}
+
+#top-right{
+    width:100%;
+    height: 45%;
+}
+
+#top-right img{
+    width: 100%;
+    height: 80%;
+    object-fit: cover;
+    object-position: top;
+}
+
+#top-right-text{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#top-right-text h3{
+    font-size: 16px;
+    font-weight: 800;
+    text-align: left;
+    /* width: 50%; */
+}
+
+#top-right-text p{
+    text-align: right;
+    font-weight: 500;
+    width: 100%;
+}
+
+
+
 }
